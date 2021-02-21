@@ -1,0 +1,26 @@
+.input {
+    &__error-text {
+        transition: 0.3s ease;
+        transition-property: opacity, height;
+    }
+
+    @media (min-width: @desktop) {
+        &__value {
+            transition: 0.3s ease;
+            transition-property: background-color, border;
+
+            &::placeholder {
+                transition: 0.3s ease;
+                transition-property: color;
+            }
+        }
+
+        &:hover {
+            .input {
+                &__value {
+                    background: gray;
+                }
+            }
+        }
+    }
+}

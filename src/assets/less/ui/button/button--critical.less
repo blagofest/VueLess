@@ -1,0 +1,35 @@
+.button {
+  display: inline-block;
+  padding: 0 2rem;
+  font-weight: 600;
+  opacity: 0.85;
+  transition: 0.3s ease;
+  transition-property: opacity, background-color;
+
+  &--white {
+    border: 1px solid white;
+    color: white;
+
+    &:hover {
+      background-color: rgba(white, 0.1);
+    }
+  }
+
+  &--black {
+    background-color: rgba(black, 0.8);
+    color: white;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+
+  &--big {
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

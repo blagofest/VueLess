@@ -1,0 +1,92 @@
+.main {
+  padding-top: 5rem;
+
+  &__container {
+    height: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    height: 100%
+  }
+
+  &__text {
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+
+      + p {
+        margin-top: 1rem;
+      }
+    }
+
+    ul {
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    li {
+      cursor: pointer;
+      opacity: 0.7;
+      transition: 0.3s ease opacity;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        width: 2px;
+        height: 2rem;
+        background-color: white;
+        border-radius: 2px;
+      }
+
+      span {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      + li {
+        margin-top: 1rem;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__slider {
+    bottom: 2rem;
+
+    &,
+    img {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      max-width: 50rem;
+    }
+
+    img {
+      bottom: 0;
+      display: block;
+      height: auto;
+      opacity: 0;
+      transition: 0.5s ease;
+      transition-property: opacity;
+
+      &.active {
+        transition-delay: 0.25s;
+        opacity: 1;
+      }
+    }
+  }
+}
